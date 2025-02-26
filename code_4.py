@@ -20,7 +20,7 @@ def get_big_mac_price_by_year(year,country_code):
         row = cntry_df['date'][i]
         if row[:4] == year:
             total += cntry_df['dollar_price'][i]
-    
+            
     return round(total.mean(),2)
 
     #year_date = day.datetime.year()
@@ -40,7 +40,7 @@ def get_big_mac_price_by_country(country_code):
     
     for i in cntry_df.index: #using df.index iteration
         cnt +=1
-    print(cnt)     
+    #print(cnt)     
     return round(cntry_df['dollar_price'].mean(),2)
 
 def get_the_cheapest_big_mac_price_by_year(year):
