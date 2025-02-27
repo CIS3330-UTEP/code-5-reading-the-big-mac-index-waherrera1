@@ -18,7 +18,7 @@ def get_big_mac_price_by_year(year,country_code):
     cntry_df = df[df['iso_a3'] == country]
     total = 0
     
-    for index, row in cntry_df.iterrows():
+    for index, row in cntry_df.iterrows(): 
         if row['date'][:4] == year:
             total += cntry_df['dollar_price'][index] 
     
@@ -37,6 +37,7 @@ def get_big_mac_price_by_country(country_code):
     cntry_df = df[df['iso_a3'] == country]  
     return round(cntry_df['dollar_price'].mean(),2) 
 
+#this function
 def get_the_cheapest_big_mac_price_by_year(year):
     
     if type(year) == int:
