@@ -1,4 +1,3 @@
-import csv
 import pandas as pd
 big_mac_file = './big-mac-full-index.csv'
 
