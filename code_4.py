@@ -1,6 +1,7 @@
+import csv
 import pandas as pd
-big_mac_file = './big-mac-full-index.csv'
 
+big_mac_file = './big-mac-full-index.csv'
 df = pd.read_csv(big_mac_file)
 
 #This function solves the problem by creating a dataframe that only includes the rows
