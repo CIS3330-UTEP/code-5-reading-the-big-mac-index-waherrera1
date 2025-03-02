@@ -15,15 +15,16 @@ def get_big_mac_price_by_year(year,country_code):
         year = str(year)
     
     country = country_code.upper()  
-    
+ 
     cntry_df = df[df['iso_a3'] == country]
     total = 0
     
     for index, row in cntry_df.iterrows(): 
         if row['date'][:4] == year:
             total += cntry_df['dollar_price'][index] 
-            
-    return round(total.mean(),2)
+
+    avrg = round(total.mean(),2)
+    return avrg
 
 #This function solves the problem by creating a data frame that contains the rows 
 #under the column with a matching country code, and then returning the mean of the 
@@ -84,7 +85,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     return f'{country_name}({country_code}): ${dollar_price}'
 
 if __name__ == "__main__":
-    avg = get_big_mac_price_by_year(2000,'ARG')
+    avg = get_big_mac_price_by_year(2019,'kor')
     print(avg)
     
     mean_price = get_big_mac_price_by_country('arg')
